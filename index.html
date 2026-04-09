@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل بيانات الموظفين</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>تسجيل بيانات الموظفين</h1>
+      <p class="sub">كل موظف يسجل مرة واحدة فقط</p>
+      <form id="employeeForm" novalidate>
+        <label>
+          <span>القسم</span>
+          <input type="text" id="department" name="department" required>
+        </label>
+
+        <label>
+          <span>الإيميل</span>
+          <input type="email" id="email" name="email" required>
+        </label>
+
+        <fieldset>
+          <legend>الحالة الأولى</legend>
+          <label class="radio"><input type="radio" name="status1" value="يعمل" required><span>يعمل</span></label>
+          <label class="radio"><input type="radio" name="status1" value="لايعمل" required><span>لايعمل</span></label>
+        </fieldset>
+
+        <label>
+          <span>رقم التحويلة</span>
+          <input type="text" id="extension" name="extension" inputmode="numeric" required>
+        </label>
+
+        <fieldset>
+          <legend>الحالة الثانية</legend>
+          <label class="radio"><input type="radio" name="status2" value="يعمل" required><span>يعمل</span></label>
+          <label class="radio"><input type="radio" name="status2" value="لايعمل" required><span>لايعمل</span></label>
+        </fieldset>
+
+        <button id="submitBtn" type="submit">إرسال</button>
+      </form>
+      <div id="message" class="message" hidden></div>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
